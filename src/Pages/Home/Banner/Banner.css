@@ -1,10 +1,12 @@
 .banner-background {
     height: 100vh;
-    background-image: url(../../../images/background3.jpg);
+    background-image: url(../../../images/background3.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.site-title{
+    color: orange;
+}
 .banner-img {
     height: 100%;
 }

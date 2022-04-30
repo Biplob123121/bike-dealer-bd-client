@@ -12,8 +12,11 @@ const Banner = () => {
         <section className='banner-background'>
             <section className='container'>
                 <div className='row banner-section'>
-                    <div className='col-lg-6 col-sm-12'>
-                        <h1>Banner info</h1>
+                    <div className='col-lg-6 col-sm-12 d-flex align-items-center text-white'>
+                        <div>
+                            <marquee behavior="scroll" direction="left"><h1 className='site-title'>Welcome to BIKE DEALER BD</h1></marquee>
+                            <h4>It's the best Bike Dealer in BD. We are provided various luxurious Bike in Bangladesh. It is the realiable place to find and choose your Bike...</h4>
+                        </div>
                     </div>
                     <div className='col-lg-6 col-sm-12'>
                         <Carousel>
@@ -23,10 +26,6 @@ const Banner = () => {
                                     src={banner1}
                                     alt="First slide"
                                 />
-                                <Carousel.Caption>
-                                    <h3>First slide label</h3>
-                                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -34,11 +33,6 @@ const Banner = () => {
                                     src={banner2}
                                     alt="Second slide"
                                 />
-
-                                <Carousel.Caption>
-                                    <h3>Second slide label</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -46,11 +40,6 @@ const Banner = () => {
                                     src={banner3}
                                     alt="Third slide"
                                 />
-
-                                <Carousel.Caption>
-                                    <h3>Third slide label</h3>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                     </div>
