@@ -10,3 +10,16 @@
 .banner-img {
     height: 100%;
 }
+
+@media only screen and (max-width : 576px) {
+    .banner-info{
+        padding-top: 80px;
+        height: 50vh;
+    }
+}
+@media only screen and (min-width : 577px) and (max-width : 992px) {
+    .banner-info{
+        padding-top: 80px;
+        height: 30vh;
+    }
+}

@@ -11,9 +11,9 @@ const Banner = () => {
     return (
         <section className='banner-background'>
             <section className='container'>
-                <div className='row banner-section'>
+                <div className='row '>
                     <div className='col-lg-6 col-sm-12 d-flex align-items-center text-white'>
-                        <div>
+                        <div className='banner-info'>
                             <marquee behavior="scroll" direction="left"><h1 className='site-title'>Welcome to BIKE DEALER BD</h1></marquee>
                             <h4>It's the best Bike Dealer in BD. We are provided various luxurious Bike in Bangladesh. It is the realiable place to find and choose your Bike...</h4>
                         </div>
