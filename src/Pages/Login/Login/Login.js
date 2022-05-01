@@ -68,7 +68,7 @@ const Login = () => {
                         <input className='w-50 mx-auto d-block rounded-3 bg-info' type="submit" value="Login" />
                     </form>
                     {errorElement}
-                    <p>New to E-Tutor? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegiter}>Please Register</Link></p>
+                    <p>New to BIKE DEALER BD? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegiter}>Please Register</Link></p>
                     <p>Forget password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
                     <SocialLogin></SocialLogin>
                     <ToastContainer />
