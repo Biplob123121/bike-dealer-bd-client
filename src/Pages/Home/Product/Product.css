@@ -1,0 +1,11 @@
+.product{
+    background-color: rgb(177, 189, 199);
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px gray;
+}
+.product img{
+    background-color: rgb(170, 175, 180);
+    border-radius: 15px;
+    width: 100%;
+}
+
