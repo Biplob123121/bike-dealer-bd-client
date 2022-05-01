@@ -6,7 +6,6 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
-import SocialLogin from './Pages/Login/SocialLogin/SocialLogin';
 
 function App() {
   return (

@@ -5,6 +5,7 @@
       "name": "Suzuki GSX",
       "description": "Suzuki GSX has been released 2021. It is a most powerful bike of Suzuki.",
       "price": "250000",
+      "quantity" : "1",
       "brand" : "Suzuki",
       "ratings" : 5
     },
@@ -14,6 +15,7 @@
       "name": "Ducati F1",
       "description": "It is the best bike for the young biker. It has been released 2019.",
       "price": "450000",
+      "quantity" :"1",
       "brand" : "Ducati",
       "ratings" : 5
     },
@@ -23,6 +25,7 @@
       "name": "Yamaha SE2",
       "description": "It has been released in 2020. It is the favourite for all bike lover.",
       "price": "370000",
+      "quantity" :"1",
       "brand" : "YAMAHA",
       "ratings" : 4.5
     }
