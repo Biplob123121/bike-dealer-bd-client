@@ -22,6 +22,9 @@ const Products = () => {
                         ></Product>)
                     }
                 </div>
+                <div className='w-25 mx-auto py-5'>
+                    <button className='w-100 py-2'>SHOW ALL</button>
+                </div>
             </div>
         </section>
     );
