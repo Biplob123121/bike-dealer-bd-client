@@ -2,3 +2,9 @@
     width: 50%;
     margin: 0px auto;
 }
+
+@media only screen and (max-width : 576px) {
+    .comming-product{
+        width: 100%;
+    }
+}
