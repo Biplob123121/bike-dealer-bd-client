@@ -10,11 +10,11 @@ const CommingProduct = () => {
         <section style={{background : '#f1f1f1'}}>
             <div className='py-5 container'>
                 <h2 className='text-center py-2'>Comming Soon :</h2>
-                <div className='w-50 mx-auto'>
+                <div className='comming-product'>
                     <Carousel>
                         <Carousel.Item>
                             <img
-                                className="d-block w-75"
+                                className="d-block w-100"
                                 src={suzuki}
                                 alt="First slide"
                             />
@@ -22,7 +22,7 @@ const CommingProduct = () => {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-75"
+                                className="d-block w-100"
                                 src={yamaha}
                                 alt="Second slide"
                             />
@@ -30,7 +30,7 @@ const CommingProduct = () => {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-75"
+                                className="d-block w-100"
                                 src={bajaj}
                                 alt="Third slide"
                             />
