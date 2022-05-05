@@ -1,3 +1,6 @@
+.products-section{
+    padding: 15px 0px;
+}
 .products-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

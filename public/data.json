@@ -1,0 +1,38 @@
+[
+    {
+        "brand": "Yamaha",
+        "investment": 100000,
+        "sell": 241,
+        "revenue": 10401
+    },
+    {
+        "brand": "Suzuki",
+        "investment": 200000,
+        "sell": 423,
+        "revenue": 24500
+    },
+    {
+        "brand": "TVS",
+        "investment": 500000,
+        "sell": 726,
+        "revenue": 67010
+    },
+    {
+        "brand": "Bajaj",
+        "investment": 500000,
+        "sell": 529,
+        "revenue": 40405
+    },
+    {
+        "brand": "Hero",
+        "investment": 600000,
+        "sell": 601,
+        "revenue": 50900
+    },
+    {
+        "brand": "Ducati",
+        "investment": 700000,
+        "sell": 70,
+        "revenue": 61000
+    }
+]

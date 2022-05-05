@@ -11,7 +11,7 @@ const Products = () => {
             .then(data => setProducts(data));
     }, [])
     return (
-        <section style={{background : 'aliceblue'}}>
+        <section className='products-section' style={{background : '#f1f1f1'}}>
             <div className='container'>
                 <h1 className='text-center pt-5'>Our Inventory : {products.length}</h1>
                 <div className='products-container'>
