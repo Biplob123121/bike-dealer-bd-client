@@ -1,0 +1,22 @@
+.blogs {
+    background-color: #f1f1f1;
+}
+
+.blogs-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.blog {
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .blogs-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

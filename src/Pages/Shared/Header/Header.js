@@ -10,7 +10,7 @@ import { signOut } from 'firebase/auth';
 const Header = () => {
     const [user] = useAuthState(auth);
 
-    const handleLogout = () =>{
+    const handleLogout = () => {
         signOut(auth);
     }
     return (
@@ -35,13 +35,23 @@ const Header = () => {
                     <Nav>
                         {
                             user ?
-                                <button style={{background : 'aliceblue'}} className='border-0 text-dark fw-bold' onClick={handleLogout}>Logout</button>
+                                <>
+                                    <Nav.Link as={Link} to='/manageItems'>ManageItems</Nav.Link>
+                                    <Nav.Link as={Link} to='/addItems'>AddItems</Nav.Link>
+                                    <Nav.Link as={Link} to='/myItems'>MyItems</Nav.Link>
+
+                                    <button style={{ background: 'aliceblue' }} className='border-0 text-dark fw-bold' onClick={handleLogout}>Logout</button>
+
+                                </>
                                 :
-                                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                                <>
+                                    <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                                    <Nav.Link as={Link} to='/register'>
+                                        Register
+                                    </Nav.Link>
+                                </>
+
                         }
-                        <Nav.Link as={Link} to='/register'>
-                            Register
-                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
