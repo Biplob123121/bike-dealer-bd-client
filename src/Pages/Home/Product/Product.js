@@ -19,7 +19,7 @@ const Product = ({ product }) => {
                 <p>Supplier : {supplier}</p>
                 <p><small>{description}</small></p>
             </div>
-            <button onClick={()=>navigateToManageItem(_id)} className='product-btn'>Update</button>
+            <button onClick={()=>navigateToManageItem(_id)} className='product-btn'>Manage Stock</button>
         </div>
     );
 };

@@ -1,0 +1,16 @@
+.product-delivery{
+    width: 50%;
+    margin: 0px auto;
+}
+.delivery-img{
+    width: 200px;
+    height: 200px;
+}
+.quantity-increasing{
+    width: 50%;
+    margin: 0px auto;
+}
+.quantity-increasing input{
+    display: block;
+    margin: 15px;
+}

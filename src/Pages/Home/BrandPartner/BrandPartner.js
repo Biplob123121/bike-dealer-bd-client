@@ -11,7 +11,7 @@ const BrandPartner = () => {
     return (
         <section  style={{background : '#f1f1f1'}}>
             <div className='container py-5'>
-                <h2 className='text-center'>Our Brand Partner :</h2>
+                <h2 className='text-center text-primary'>Our Brand Partner :</h2>
                 <div className='brand-container'>
                     <img src={yamaha} alt="" />
                     <img src={suzuki} alt="" />

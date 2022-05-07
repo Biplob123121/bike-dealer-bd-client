@@ -13,7 +13,7 @@ const Dashboard = () => {
     return (
     <section className='chart-section'>
         <div className='container'>
-            <h2 className='chart-info text-center pt-5'>Last month Delivered :</h2>
+            <h2 className='chart-info text-primary text-center pt-5'>Last month Delivered :</h2>
             <ResponsiveContainer width='100%' height={400}>
             <BarChart data={data}>
                 <Bar dataKey="sell" fill="#8884d8" />

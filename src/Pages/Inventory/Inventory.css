@@ -1,32 +1,11 @@
-.products-section{
-    padding: 15px 0px;
-}
 .products-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.inventory-btn{
-    width: 40%;
-    margin: 0px auto;
-    padding-top: 30px;
-}
-.inventory-btn button{
-    width: 100%;
-    border-radius: 15px;
-    background-color: #eec476;
-    font-weight: 700;
-}
-.inventory-btn button:hover{
-    background-color: orange;
-}
-
 @media only screen and (max-width : 576px) {
     .products-container{
         grid-template-columns: repeat(1, 1fr);
-    }
-    .inventory-btn{
-        width: 80%;
     }
 }
 @media only screen and (min-width : 577px) and (max-width : 992px) {

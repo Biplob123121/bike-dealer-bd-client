@@ -25,7 +25,6 @@ const MyItems = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        console.log(data);
                         const remaining = products.filter(p => p._id !== id);
                         setProducts(remaining);
                     }
@@ -35,9 +34,9 @@ const MyItems = () => {
 
     }
     return (
-        <section style={{ background: '#f1f1f1' }}>
+        <section style={{ background: '#f1f1f1', padding : '30px' }}>
             <div className='container'>
-                <h2 className='text-center py-5'>My Added Items : {myProducts.length}</h2>
+                <h2 className='text-center pb-3'>My Added Items : {myProducts.length}</h2>
                 <div className='my-items'>
                     {
                         myProducts.map(myProduct => <div

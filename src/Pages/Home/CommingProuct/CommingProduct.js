@@ -9,7 +9,7 @@ const CommingProduct = () => {
     return (
         <section style={{ background: '#f1f1f1' }}>
             <div className='py-5 container'>
-                <h2 className='text-center py-2'>Comming Soon :</h2>
+                <h2 className='text-center text-primary py-2'>Comming Soon :</h2>
                 <div className='comming-product text-center'>
                     <Carousel>
                         <Carousel.Item>
