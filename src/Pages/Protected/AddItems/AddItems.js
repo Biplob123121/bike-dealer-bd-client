@@ -1,20 +1,54 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../../firebase.init';
 import './AddItems.css';
 
 const AddItems = () => {
+    const [user] = useAuthState(auth);
+    const { register, handleSubmit, reset } = useForm();
+
+    const onSubmit = d => {
+        const supplierData = {
+            supplier: `${user.displayName}`,
+            sEmail: `${user.email}`
+        };
+        const data = Object.assign(supplierData, d);
+
+        const url = `http://localhost:5000/product`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.acknowledged === true) {
+                    toast('Item is Added');
+                    reset();
+                }
+            })
+    };
     return (
-        <div className='container addItems-section'>
-            <h2 className='text-center'>Add an items :</h2>
-            <form>
-                <p>Supplier Name : <input type="text" name="name" id="" /></p>
-                <p>Supplier Email : <input type="email" name="email" id="" /></p>
-                <p>Product Name : <input type="text" name="product-name" id="" /></p>
-                <p>Product Quantity : <input type="number" name="product-quantity" id="" /></p>
-                <p>Product Price : <input type="number" name="price" id="" /></p>
-                <textarea cols="50" rows="3" placeholder='Give Product description...'></textarea>
-                <input type="submit" value="Add Item" />
-            </form>
-        </div>
+        <section style={{ background: '#f1f1f1' }}>
+            <div className='container addItems-section'>
+                <h2 className='text-center'>Add an items :</h2>
+                <form className='add-item-form' onSubmit={handleSubmit(onSubmit)}>
+                    <input placeholder='Supplier name' value={user.displayName} readOnly disabled />
+                    <input placeholder='Supplier email' value={user.email} readOnly disabled />
+                    <input {...register("name", { required: true, maxLength: 20 })} placeholder='Product name' />
+                    <textarea {...register("description")} placeholder='Product description' />
+                    <input type="number" {...register("price")} placeholder='Product price' />
+                    <input type="number" {...register("quantity")} placeholder='Product Quantity' />
+                    <input type="text" {...register("picture")} placeholder='Photo URL' />
+                    <input type="submit" value='Add Item' />
+                </form>
+                <ToastContainer />
+            </div>
+        </section>
     );
 };
 
