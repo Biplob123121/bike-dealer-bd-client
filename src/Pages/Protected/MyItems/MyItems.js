@@ -8,7 +8,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://still-earth-69703.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -18,7 +18,7 @@ const MyItems = () => {
     const deleteItem = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://still-earth-69703.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

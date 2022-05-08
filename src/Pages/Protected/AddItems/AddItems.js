@@ -16,7 +16,7 @@ const AddItems = () => {
         };
         const data = Object.assign(supplierData, d);
 
-        const url = `http://localhost:5000/product`;
+        const url = `https://still-earth-69703.herokuapp.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {
