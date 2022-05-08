@@ -3,9 +3,19 @@
     margin: 0px auto;
     padding: 40px 0px;
 }
-.addItems-section input, textarea{
+.addItems-section input, textarea:not([type="submit"]){
     width: 100%;
     margin-bottom: 20px;
+}
+.add-btn{
+    width: 50%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    background-color:#eec476;
+    border-radius: 15px;
+}
+.add-btn:hover{
+    background-color: orange;
 }
 
 @media only screen and (max-width : 600px) {

@@ -14,3 +14,12 @@
     display: block;
     margin: 15px;
 }
+.manage-btn{
+    background-color: #eec476;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 6px ;
+}
+.manage-btn:hover{
+    background-color: orange;
+}

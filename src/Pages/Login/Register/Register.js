@@ -49,7 +49,7 @@ const Register = () => {
                         </p>
                         <input
                             disabled={!agree}
-                            className='w-50 mx-auto d-block rounded-3 bg-info' type="submit" value="Register" />
+                            className='w-50 mx-auto d-block rounded-3 register-btn' type="submit" value="Register" />
                     </form>
                     <p>Already have an Account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Login</Link></p>
                     <SocialLogin></SocialLogin>

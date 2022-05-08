@@ -1,9 +1,9 @@
 import React from 'react';
 import google from '../../../images/Social/google.png';
-import github from '../../../images/Social/github.png';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import './SocialLogin.css';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -32,18 +32,13 @@ const SocialLogin = () => {
             </div>
             {errorElement}
             <div className='row'>
-                <div className='col-sm-12 col-lg-6'>
-                    <button onClick={() => signInWithGoogle()} className='bg-info rounded border-0 py-2 px-3 mb-3'>
+                <div className='col-sm-12 col-lg-6 mx-auto'>
+                    <button onClick={() => signInWithGoogle()} className=' rounded border-0 google-btn mb-3'>
                         <img style={{ width: '30px' }} src={google} alt="" />
                         <span className='px-2'>Google Sign In</span>
                     </button>
                 </div>
-                <div className='col-sm-12 col-lg-6'>
-                    <button onClick={() => signInWithGithub()} className='bg-info rounded border-0 py-2 px-3 '>
-                        <img style={{ width: '30px' }} src={github} alt="" />
-                        <span className='px-2'>Github Sign In</span>
-                    </button>
-                </div>
+               
             </div>
         </div>
     );

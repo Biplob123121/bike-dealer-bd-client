@@ -35,7 +35,7 @@ const AddItems = () => {
     return (
         <section style={{ background: '#f1f1f1' }}>
             <div className='container addItems-section'>
-                <h2 className='text-center'>Add an items :</h2>
+                <h2 className='text-center text-primary'>Add an items :</h2>
                 <form className='add-item-form' onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder='Supplier name' value={user.displayName} readOnly disabled />
                     <input placeholder='Supplier email' value={user.email} readOnly disabled />
@@ -44,7 +44,7 @@ const AddItems = () => {
                     <input type="number" {...register("price")} placeholder='Product price' />
                     <input type="number" {...register("quantity")} placeholder='Product Quantity' />
                     <input type="text" {...register("picture")} placeholder='Photo URL' />
-                    <input type="submit" value='Add Item' />
+                    <input type="submit" className='add-btn' value='Add Item' />
                 </form>
                 <ToastContainer />
             </div>

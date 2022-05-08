@@ -67,17 +67,17 @@ const ManageItems = () => {
     return (
         <section style={{ background: '#f1f1f1' }}>
             <div className='container py-4'>
-                <h3 className='text-center pt-4'>Manage Item Id : {product._id}</h3>
+                <h3 className='text-center text-primary pt-4'>Manage Item Id : {product._id}</h3>
                 <div className='product-delivery text-center'>
                     <img className='delivery-img' src={product.picture} alt="" />
                     <h4>Product Name : {product.name}</h4>
                     <p>Product Quantity : {product.quantity}</p>
-                    <button onClick={decreasingQuantity}>Deliveried</button>
+                    <button className='manage-btn' onClick={decreasingQuantity}>Deliveried</button>
                 </div>
                 <h3 className='text-center pt-5'>Increase Product Quantity :</h3>
                 <div className='quantity-increasing d-flex justify-content-center'>
                     <input ref={numRef} type="number" name="addNum" id="" placeholder='Enter Quantity number' />
-                    <input onClick={increasingQuantity} type="submit" value="Increase" />
+                    <input className='manage-btn' onClick={increasingQuantity} type="submit" value="Increase" />
 
                 </div>
             </div>

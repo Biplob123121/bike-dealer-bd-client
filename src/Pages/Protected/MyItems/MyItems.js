@@ -36,7 +36,7 @@ const MyItems = () => {
     return (
         <section style={{ background: '#f1f1f1', padding : '30px' }}>
             <div className='container'>
-                <h2 className='text-center pb-3'>My Added Items : {myProducts.length}</h2>
+                <h2 className='text-center text-primary pb-3'>My Added Items : {myProducts.length}</h2>
                 <div className='my-items'>
                     {
                         myProducts.map(myProduct => <div

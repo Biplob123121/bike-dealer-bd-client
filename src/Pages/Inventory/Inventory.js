@@ -13,7 +13,7 @@ const Inventory = () => {
     return (
         <section style={{ background: '#f1f1f1' }}>
             <div className='container py-4'>
-                <h2 className='text-center'>Our Inventory : {products.length}</h2>
+                <h2 className='text-center text-primary'>Our Inventory : {products.length}</h2>
 
                 <div className='products-container'>
                     {

@@ -65,7 +65,7 @@ const Login = () => {
                     <form onSubmit={handleLoginSubmit}>
                         <input ref={emailRef} type="email" name="email" id="email" placeholder='Your Email' required />
                         <input ref={passwordRef} type="password" name="password" id="password" placeholder='Your Password' required />
-                        <input className='w-50 mx-auto d-block rounded-3 bg-info' type="submit" value="Login" />
+                        <input className='w-50 mx-auto d-block rounded-3 login-btn' type="submit" value="Login" />
                     </form>
                     {errorElement}
                     <p>New to BIKE DEALER BD? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegiter}>Please Register</Link></p>

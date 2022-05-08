@@ -1,0 +1,14 @@
+.google-btn{
+    margin: 0px auto;
+    padding: 10px 55px;
+    background-color: #eec476;
+}
+.google-btn:hover{
+    background-color: orange;
+}
+
+@media only screen and (max-width: 600px) {
+    .google-btn{
+        padding: 5px 5px;
+    }
+}
