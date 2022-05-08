@@ -1,0 +1,31 @@
+.manage-items{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.manage-item{
+    background-color: rgb(230, 230, 230);
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+}
+.manage-item img{
+    width: 50px;
+    height: 50px;
+}
+.btn-manage{
+    background-color: #eec476;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 6px ;
+}
+.btn-manage:hover{
+    background-color: orange;
+}
+
+@media only screen and (max-width : 600px) {
+    .manage-items{
+        width: 100%;
+    }
+}

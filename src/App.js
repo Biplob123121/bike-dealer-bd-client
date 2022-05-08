@@ -14,6 +14,7 @@ import ManageItems from './Pages/Protected/ManageItems/ManageItems';
 import Inventory from './Pages/Inventory/Inventory';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Blogs from './Pages/Blogs/Blogs';
+import Manage from './Pages/Protected/Manage/Manage';
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
         <Route path='/addItems' element={
           <RequireAuth>
             <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <Manage></Manage>
           </RequireAuth>
         }></Route>
         <Route path='/myItems' element={

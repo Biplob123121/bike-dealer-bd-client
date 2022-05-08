@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import useProducts from '../../../hooks/useProducts';
 import auth from '../../../firebase.init';
 import './MyItems.css';
 import deleteIcon from '../../../images/delete-icon.png';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('https://still-earth-69703.herokuapp.com/product')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, [])
+    const [products, setProducts] = useProducts();
 
     const myProducts = products.filter(p => p.sEmail === user.email);
 
