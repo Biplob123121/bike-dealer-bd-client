@@ -13,7 +13,7 @@ const MyItems = () => {
     const deleteItem = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `https://still-earth-69703.herokuapp.com/product/${id}`;
+            const url = `https://bike-dealer-bd-server.vercel.app/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

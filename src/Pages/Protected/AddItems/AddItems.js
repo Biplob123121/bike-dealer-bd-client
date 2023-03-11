@@ -16,7 +16,7 @@ const AddItems = () => {
         };
         const data = Object.assign(supplierData, d);
 
-        const url = `https://still-earth-69703.herokuapp.com/product`;
+        const url = `https://bike-dealer-bd-server.vercel.app/product`;
         fetch(url, {
             method: 'POST',
             headers: {

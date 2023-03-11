@@ -8,7 +8,7 @@ const ManageItems = () => {
     const numRef = useRef(0);
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const url = `https://still-earth-69703.herokuapp.com/product/${manageId}`;
+        const url = `https://bike-dealer-bd-server.vercel.app/product/${manageId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -23,7 +23,7 @@ const ManageItems = () => {
             quantity = parseInt(quantity) - 1;
             const newProduct = { quantity, ...rest };
             setProduct(newProduct);
-            fetch(`https://still-earth-69703.herokuapp.com/product/${manageId}`, {
+            fetch(`https://bike-dealer-bd-server.vercel.app/product/${manageId}`, {
                 method : 'PUT',
                 headers : {
                     'content-type' : 'application/json'
@@ -48,7 +48,7 @@ const ManageItems = () => {
             quantity = parseInt(quantity) + parseInt(increasingNum);
             const newProduct = { quantity, ...rest };
             setProduct(newProduct);
-            fetch(`https://still-earth-69703.herokuapp.com/product/${manageId}`, {
+            fetch(`https://bike-dealer-bd-server.vercel.app/product/${manageId}`, {
                 method : 'PUT',
                 headers : {
                     'content-type' : 'application/json'

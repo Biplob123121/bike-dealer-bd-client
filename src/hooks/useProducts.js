@@ -4,7 +4,7 @@ const useProducts = () =>{
     const [products, setProducts] =useState([]);
 
     useEffect( ()=>{
-        fetch('https://still-earth-69703.herokuapp.com/product')
+        fetch('https://bike-dealer-bd-server.vercel.app/product')
         .then(res => res.json())
         .then(data => setProducts(data));
     }, [])

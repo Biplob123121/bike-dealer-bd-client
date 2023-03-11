@@ -5,12 +5,12 @@ import Product from '../Product/Product';
 import './Products.css';
 
 const Products = () => {
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
 
 
     const topProducts = products.slice(0, 6);
     return (
-        <section className='products-section' style={{background : '#f1f1f1'}}>
+        <section className='products-section' style={{ background: '#f1f1f1' }}>
             <div className='container'>
                 <h1 className='text-center text-primary pt-5'>Our Products :</h1>
                 <div className='products-container'>
