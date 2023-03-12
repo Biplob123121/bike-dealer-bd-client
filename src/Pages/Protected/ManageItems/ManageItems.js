@@ -8,7 +8,7 @@ const ManageItems = () => {
     const numRef = useRef(0);
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const url = `https://bike-dealer-bd-server.vercel.app/product/${manageId}`;
+        const url = `https://bd-bike-dealer-server.vercel.app/api/product/${manageId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data));
@@ -23,41 +23,47 @@ const ManageItems = () => {
             quantity = parseInt(quantity) - 1;
             const newProduct = { quantity, ...rest };
             setProduct(newProduct);
-            fetch(`https://bike-dealer-bd-server.vercel.app/product/${manageId}`, {
-                method : 'PUT',
-                headers : {
-                    'content-type' : 'application/json'
+            fetch(`https://bd-bike-dealer-server.vercel.app/api/product/${manageId}`, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
                 },
-                body : JSON.stringify(newProduct)
+                body: JSON.stringify(newProduct)
             })
-            .then(res => res.json())
-            .then(data => {
-                if(data.acknowledged === true){
-                    toast('Product delivery is completed!!');
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.acknowledged === true) {
+                        toast('Product delivery is completed!!');
+                    }
+                })
         }
         else {
             alert("You can't delivery product. Your quantity is zero.");
         }
     }
 
-    const increasingQuantity = event =>{
+    const increasingQuantity = event => {
         const increasingNum = numRef.current.value;
         let { quantity, ...rest } = product;
+        let newProduct;
+        if (increasingNum > 0) {
             quantity = parseInt(quantity) + parseInt(increasingNum);
-            const newProduct = { quantity, ...rest };
-            setProduct(newProduct);
-            fetch(`https://bike-dealer-bd-server.vercel.app/product/${manageId}`, {
-                method : 'PUT',
-                headers : {
-                    'content-type' : 'application/json'
-                },
-                body : JSON.stringify(newProduct)
-            })
+            const updateProduct = { quantity, ...rest };
+            setProduct(updateProduct);
+            newProduct = updateProduct
+        } else {
+            return alert('Give a positive number')
+        }
+        fetch(`https://bd-bike-dealer-server.vercel.app/api/product/${manageId}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newProduct)
+        })
             .then(res => res.json())
             .then(data => {
-                if(data.acknowledged === true){
+                if (data.acknowledged === true) {
                     toast('Quantity is added....');
                 }
             })

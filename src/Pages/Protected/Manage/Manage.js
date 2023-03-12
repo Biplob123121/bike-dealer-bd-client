@@ -10,7 +10,7 @@ const Manage = () => {
     const deleteItem = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `https://bike-dealer-bd-server.vercel.app/product/${id}`;
+            const url = `https://bd-bike-dealer-server.vercel.app/api/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

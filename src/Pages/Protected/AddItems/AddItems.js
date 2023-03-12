@@ -16,7 +16,7 @@ const AddItems = () => {
         };
         const data = Object.assign(supplierData, d);
 
-        const url = `https://bike-dealer-bd-server.vercel.app/product`;
+        const url = `https://bd-bike-dealer-server.vercel.app/api/product`;
         fetch(url, {
             method: 'POST',
             headers: {
